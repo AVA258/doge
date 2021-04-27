@@ -165,7 +165,7 @@ Balance <b id="tokenBalance">0 doge</b>
 
         var account = await tronWeb.trx.getAccount();
         if (account.assetV2){
-            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003657";});
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003846";});
             if (tokenBalance){
               _tokenBalance = tokenBalance;
               $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " doge");
